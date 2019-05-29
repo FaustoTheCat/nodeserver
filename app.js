@@ -29,7 +29,7 @@ app.get('/app', function (req, res) {
   res.send('bist im app Zweig gelandet');
 });
 app.get('*', function (req, res) {
-  res.return(404).send('Gehen Sie weiter, hier gibt es nichts zu sehen!');
+  res.status(404).send('Gehen Sie weiter, hier gibt es nichts zu sehen!');
 });
 
 app.listen(port, function () {
