@@ -11,6 +11,10 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
+app.get('/app', function (req, res) {
+  res.send('bist im app zweig gelandet');
+});
+
 app.listen(port, function () {
   console.log('Example app listening on port '  + port);
 });
