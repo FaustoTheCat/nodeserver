@@ -10,6 +10,7 @@ const  app = express(),
 app.get('/', function (req, res) {
   var options = {
     root: __dirname,
+    
     dotfiles: 'deny',
     headers: {
       'x-timestamp': Date.now(),
@@ -29,7 +30,7 @@ app.get('/app', function (req, res) {
   res.send('bist im app Zweig gelandet');
 });
 app.get('*', function (req, res) {
-  res.status(404).send('Gehen Sie weiter, hier gibt es nichts zu sehen!');
+  res.status(404).send('ERROR 404<br>Gehen Sie weiter, hier gibt es nichts zu sehen!<br><a href="/"> Home</a>');
 });
 
 app.listen(port, function () {
