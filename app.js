@@ -8,7 +8,7 @@ const  app = express(),
 
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.send(index);
 });
 
 app.get('/app', function (req, res) {
