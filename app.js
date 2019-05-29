@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
   var options = {
     root: __dirname
   }
-  res.sendFile('index.html', options, err{
+  res.sendFile('index.html', options, function(err) {
     if (err) {
       next(err)
     } else {
