@@ -8,11 +8,20 @@ const  app = express(),
 
 
 app.get('/', function (req, res) {
-  res.sendFile('index.html');
+  var options = {
+    root: __dirname
+  }
+  res.sendFile('index.html', options, err{
+    if (err) {
+      next(err)
+    } else {
+      console.log('Sent: index.html');
+    }
+  });
 });
 
 app.get('/app', function (req, res) {
-  res.send('bist im app zweig gelandet');
+  res.send('bist im app Zweig gelandet');
 });
 
 app.listen(port, function () {
