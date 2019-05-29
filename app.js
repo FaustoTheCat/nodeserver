@@ -8,7 +8,7 @@ const  app = express(),
 
 
 app.get('/', function (req, res) {
-  res.send(index);
+  res.sendfile('index.html');
 });
 
 app.get('/app', function (req, res) {
