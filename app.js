@@ -8,7 +8,7 @@ const  express = require('express'),
 const  app = express(),
        port = 3000;
 
-connection = dbcon.connect(); {
+var connection = dbcon;
 
 app.get('/', function (req, res) {
   var options = {
