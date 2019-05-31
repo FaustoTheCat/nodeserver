@@ -8,14 +8,14 @@ const  express = require('express'),
 const  app = express(),
        port = 3000;
 
-connection = dbcon.con(null,function(err {
+connection = dbcon.connect(null,function(err) {
   if (err) {
     console.log(err.message);
     next(err)
   } else {
     console.log(err.message);
   }
-}) );
+} );
 
 app.get('/', function (req, res) {
   var options = {
