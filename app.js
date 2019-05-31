@@ -2,15 +2,25 @@
 
 const server = require('http');
 
-const  express = require('express');
+const  express = require('express'),
+       dbcon = require('./dbmodule');
+
 const  app = express(),
        port = 3000;
 
+connection = dbcon.con(null,function(err {
+  if (err) {
+    console.log(err.message);
+    next(err)
+  } else {
+    console.log(err.message);
+  }
+}) );
 
 app.get('/', function (req, res) {
   var options = {
     root: __dirname,
-    
+
     dotfiles: 'deny',
     headers: {
       'x-timestamp': Date.now(),
